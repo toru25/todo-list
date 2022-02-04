@@ -1,0 +1,109 @@
+/* datetimepicker用 土日の色を変更 */
+.datepicker-days th.dow:first-child,
+.datepicker-days td:first-child {
+  color: #f00;
+}
+.datepicker-days th.dow:last-child,
+.datepicker-days td:last-child {
+  color: #00f;
+}
+
+/* ヘッダーを避けるためのマージン */
+.mt-5rem {
+  margin-top: 5rem;
+}
+
+/* 月画面 カレンダーの日付のスタイル */
+.date-style {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  text-align: center;
+  line-height: 35px;
+  font-size: 15px;
+  margin: auto;
+}
+
+.date-style:hover {
+  background-color: lightgray;
+}
+
+/* カレンダーのクリック出来ない日付用 */
+.date-disable-style {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  text-align: center;
+  line-height: 35px;
+  font-size: 15px;
+  margin: auto;
+}
+
+/* 月画面 タスクの表示が画面外にはみ出す場合 */
+.day-task {
+  overflow-y: auto;
+}
+
+/* 月画面 タスクがある日の色 */
+.bg-info-2 {
+  background-color: rgba(178, 225, 252, 0.534);
+}
+
+/* 日画面 日付選択用 */
+.custom-input {
+  border: none;
+  outline: none;
+  caret-color: transparent;
+  text-align: center;
+  z-index: 0;
+}
+
+.z-100 {
+  z-index: 100;
+}
+
+/* 日画面 datetimepickerを中央付近に表示する */
+.day-task-input .bootstrap-datetimepicker-widget {
+  position: absolute;
+  -webkit-transform: translateX(40%);
+  transform: translateX(40%);
+}
+
+/* 日画面 時間ごとの表示の高さの指定 */
+.hour-skd {
+  min-height: 3rem;
+}
+
+/* 日画面 時間ごとに区切るためのボーダーのスタイル */
+.time-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+
+.time-border::after {
+  border-top: 1px solid lightgrey;
+  content: "";
+  width: 90%;
+  margin-left: 1rem;
+}
+
+/* 日画面 タスク表示の間隔 */
+.hour-task {
+  display: grid;
+  grid-row-gap: 12px;
+}
+
+/* その他 */
+.w-10 {
+  width: 10%;
+}
+
+.w-90 {
+  width: 90%;
+}
