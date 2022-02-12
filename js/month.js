@@ -21,10 +21,13 @@ list.sort((a, b) => {
 window.onload = function () {
   showProcess(today);
   // タスク表示部分の高さの調整
+  // カレンダー部分の高さの取得
   const calender_div = document.getElementById('calender');
   const calender_h = calender_div.clientHeight;
+  // 画面全体の高さの取得
   const window_h = window.innerHeight;
-  const task_h = window_h * 0.9 - calender_h;
+  // タスク表示部分の高さの設定
+  const task_h = window_h * 0.8 - calender_h;
   const task_elem = document.getElementById('task-list');
   task_elem.style.maxHeight = task_h + "px";
 };
@@ -92,10 +95,13 @@ function createProcess(year, month) {
         count++;
         const data_date = year + "/" + (month + 1) + "/" + count;
         if (year == selectDate.getFullYear() && month == selectDate.getMonth() && count == selectDate.getDate()) {
+          // 選択した日の表示（水色）
           calendar += "<td><div class='date-style bg-info' id='calender_td' data-date='" + data_date + "'>" + count + "</div></td>";
         } else if (list.find((item) => item.date == data_date)) {
+          // タスクがある日の表示（薄水色）
           calendar += "<td><div class='date-style bg-info-2' id='calender_td' data-date='" + data_date + "'>" + count + "</div></td>"
         } else {
+          // その他の日の表示（白色）
           calendar += "<td><div class='date-style' id='calender_td' data-date='" + data_date + "'>" + count + "</div></td>";
         }
       }

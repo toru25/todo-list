@@ -25,13 +25,14 @@
 <body>
   <!-- ヘッダーメニューの表示 -->
   <header>
+    <!-- fixed-top ヘッダーを画面上部に固定する -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand">
           <h2>TODOリスト
           </h2>
         </a>
-        <!-- 画面サイズが一定以下の場合表示を切り替える -->
+        <!-- collapse 画面サイズが一定以下の場合表示を切り替える -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -69,6 +70,7 @@
           <div class="col-12 mb-1">
             <label for="inputName" class="form-label">タスク</label>
             <input type="text" class="form-control" id="inputTask" placeholder="" required>
+            <!-- 空白の場合出力 -->
             <div class="invalid-feedback">タスクを入力してください</div>
           </div>
           <!-- 日時の入力はdatetimepickerを使用 -->
